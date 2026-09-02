@@ -1,6 +1,6 @@
 package oop_162829_jeremykaunang.week01
 
-fun main (args: Array<String>) {
+fun main() {
 
     val radius: Double = 7.0
     val pi: Double = 3.14

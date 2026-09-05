@@ -1,10 +1,10 @@
 package oop_162829_jeremykaunang.week02
 
-class Student (
+class Student(
     val name: String,
     val nim: String,
-    var gpa: Double = 0.0,
     var major: String,
+    var gpa: Double = 0.0
 ) {
     init {
         // Validasi Sederhana: Cek panjang NIM

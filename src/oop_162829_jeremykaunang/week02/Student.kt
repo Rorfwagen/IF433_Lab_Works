@@ -1,6 +1,11 @@
 package oop_162829_jeremykaunang.week02
 
-class Student (val name: String, val nim: String, var major: String) {
+class Student (
+    val name: String,
+    val nim: String,
+    var gpa: Double = 0.0,
+    var major: String,
+) {
     init {
         // Validasi Sederhana: Cek panjang NIM
         if (nim.length != 5) {
@@ -14,4 +19,3 @@ class Student (val name: String, val nim: String, var major: String) {
         println("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan).")
     }
 }
-

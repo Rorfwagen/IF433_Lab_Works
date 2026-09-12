@@ -15,13 +15,15 @@ class Employee(val name: String) {
     val tax: Double
         get() = salary * 0.1
 
-private var performanceRating: Int = 3
+    private var performanceRating: Int = 3
 
-fun increasingPerformance() {
-    performanceRating++
-    println("Kinerja $name meningkat! Rating: $performanceRating")
-}
+    fun increasingPerformance() {
+        performanceRating++
+        println("Kinerja $name meningkat! Rating: $performanceRating")
+    }
 
-fun printStatus() {
-    println("Karyawan: $name, Rating: $performanceRating")
+    fun printStatus() {
+        println("Karyawan: $name, Rating: $performanceRating")
+    }
+
 }

@@ -9,8 +9,11 @@ class Employee(val name: String) {
             } else {
                 field = value
             }
+
         }
 
+    val tax: Double
+        get() = salary * 0.1
 
 private var performanceRating: Int = 3
 

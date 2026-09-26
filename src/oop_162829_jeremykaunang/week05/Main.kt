@@ -35,6 +35,4 @@ fun main() {
     val luaslingkaran = mathHelper.hitungLuas(7.0)
     println("Luas lingkaran (jari-jari=7.0): $luaslingkaran")
     println("------------------------------")
-
-
 }

@@ -22,4 +22,19 @@ fun main() {
         }
         println("------------------------------")
     }
+
+    val mathHelper = MathHelper()
+
+    println("=== METHOD OVERLOADING (Compile-Time Polymorphism) ===")
+    val luasPersegi = mathHelper.hitungLuas(5)
+    println("Luas persegi (sisi=5): $luasPersegi")
+
+    val luasPersegiPanjang = mathHelper.hitungLuas(4,6)
+    println("Luas persegi panjang (4x6): $luasPersegiPanjang")
+
+    val luaslingkaran = mathHelper.hitungLuas(7.0)
+    println("Luas lingkaran (jari-jari=7.0): $luaslingkaran")
+    println("------------------------------")
+
+
 }

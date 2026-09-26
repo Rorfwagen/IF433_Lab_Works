@@ -7,9 +7,7 @@ fun main() {
     val daftarPegawai: List<Pegawai> = listOf(dosen1, admin1)
 
     for (pegawai in daftarPegawai) {
-
         pegawai.bekerja()
-
         when (pegawai) {
             is Dosen -> {
                 println("=> Terdeteksi sebagai Dosen (NIDN: ${pegawai.nidn})")
@@ -20,19 +18,24 @@ fun main() {
                 pegawai.doAdminWork()
             }
         }
-        println("------------------------------")
     }
+    println("-----------------------------")
 
     val mathHelper = MathHelper()
 
     println("=== METHOD OVERLOADING (Compile-Time Polymorphism) ===")
-    val luasPersegi = mathHelper.hitungLuas(5)
-    println("Luas persegi (sisi=5): $luasPersegi")
+    println("Luas persegi (sisi=5): ${mathHelper.hitungLuas(5)}")
+    println("Luas persegi panjang (4x6): ${mathHelper.hitungLuas(4, 6)}")
+    println("Luas lingkaran (jari-jari=7.0): ${mathHelper.hitungLuas(7.0)}")
+    println("-----------------------------")
 
-    val luasPersegiPanjang = mathHelper.hitungLuas(4,6)
-    println("Luas persegi panjang (4x6): $luasPersegiPanjang")
+    val eWallet1 = EWallet(accountName = "Budi", balance = 50000.0)
+    val creditCard1 = CreditCard(accountName = "Ani", limit = 100000.0)
 
-    val luaslingkaran = mathHelper.hitungLuas(7.0)
-    println("Luas lingkaran (jari-jari=7.0): $luaslingkaran")
-    println("------------------------------")
+    val daftarPembayaran: List<PaymentMethod> = listOf(eWallet1, creditCard1)
+
+    for (metode in daftarPembayaran) {
+        metode.processPayment(75000.0)
+    }
+
 }

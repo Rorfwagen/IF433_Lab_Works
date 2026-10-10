@@ -36,4 +36,9 @@ fun main() {
         ApiResponse.Loading -> "Tampilkan Spinner"
     }
     println(uiMessage)
+
+    println("\n=== TUGAS: GAME SIMULATION ===")
+
+    GameManager.startGame()
+    GameManager.startGame() // kedua kali harus ditolak
 }

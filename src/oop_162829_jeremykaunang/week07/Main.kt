@@ -41,4 +41,9 @@ fun main() {
 
     GameManager.startGame()
     GameManager.startGame() // kedua kali harus ditolak
+
+    println("Drop chance LEGENDARY: ${ItemRarity.LEGENDARY.dropChance}%")
+    val starterSword = Weapon.forgeStarterSword()
+    println("Senjata awal: ${starterSword.item.name}, damage ${starterSword.item.damage}, " +
+            "rarity ${starterSword.item.rarity}, durability ${starterSword.durability}")
 }

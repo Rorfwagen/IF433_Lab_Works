@@ -16,8 +16,14 @@ fun main() {
     println("Sama? ${reg1 == reg2}")
 
     println("\n=== TEST DATA CLASS ===")
-    val data1 =  RegularUser("Alice", 22)
-    val data2 =  RegularUser("Alice", 22)
+    val data1 = DataUser("Alice", 22)
+    val data2 = DataUser("Alice", 22)
     println(data1)
     println("Sama? ${data1 == data2}")
+
+    val data3 = data1.copy(age = 23)
+    println("Hasil Copy: $data3")
+
+    val (userName, userAge) = data1
+    println("Destructured: %userName berumur $userAge")
 }

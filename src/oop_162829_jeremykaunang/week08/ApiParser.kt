@@ -18,4 +18,13 @@ class ApiParser {
             else -> null
         }
     }
+    fun checkout(product: Product) {
+        val id = when (product) {
+            is Electronic -> product.id
+            is Clothing -> product.id
+        }
+        // !! is justified here: we know our Java service always returns a value
+        val transactionId = JavaPaymentService.processPayment(id)!!
+        println("Transaction ID: $transactionId")
+    }
 }

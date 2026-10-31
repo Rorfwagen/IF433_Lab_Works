@@ -4,9 +4,9 @@ import javax.print.attribute.standard.PrinterLocation
 
 fun main() {
     println("=== TEST SAFE CALLS & ELVIS ===")
-    val emptyOrder = Order(null,null)
+    val emptyOrder = Order(null, null)
 
-    val destination =  emptyOrder.deliveryDetails?.address?.city?.name ?: "Kota Tidak Diketahui"
+    val destination = emptyOrder.deliveryDetails?.address?.city?.name ?: "Kota Tidak Diketahui"
     println("Tujuan pengiriman: $destination")
 
     println("\n=== TEST LET BLOCK ===")
@@ -45,5 +45,15 @@ fun main() {
         val length = toxicData!!.length
     } catch (e: NullPointerException) {
         println("CRASH (NPE)! Jangan gunakan !! secara sembarangan.")
+    }
+
+    val apiResponse: Map<String, String?> = mapOf("status" to "200", "token" to null)
+    try {
+
+        val token = requireNotNull(apiResponse["token"]) {
+            "CRITICAL EXCEPTION: Token otentikasi tidak ditemukan dari server!"
+        }
+    } catch (e: IllegalArgumentException) {
+        println(e.message)
     }
 }

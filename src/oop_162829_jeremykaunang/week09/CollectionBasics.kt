@@ -22,9 +22,9 @@ fun main() {
 
     println("\n=== TEST MAP ===")
     val studentGrades = mapOf(
-        "Alice" to "A"
-        "Bob" to "B"
-        "Charlie" to "A"
+        "Alice" to "A",
+        "Bob" to "B",
+        "Charlie" to "A",
     )
     println("Nilai Bob: ${studentGrades["Bob"]}")
 

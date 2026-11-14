@@ -9,3 +9,10 @@ class WalletRepository<T> {
 
     fun getAll(): List<T> = items
 }
+interface Named {
+    val name: String
+}
+
+fun <T : Named> WalletRepository<T>.searchByName(query: String): List<T> {
+    return getAll().filter { it.name.contains(query, ignoreCase = true) }
+}

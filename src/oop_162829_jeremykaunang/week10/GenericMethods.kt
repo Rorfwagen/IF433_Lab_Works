@@ -7,3 +7,7 @@ fun <T> printData(data: T) {
 fun <T> processData(input: T): T{
     return input
 }
+
+fun <T : Comparable<T>> getMax(a: T, b: T): T {
+    return if (a > b) a else b
+}
